@@ -38,4 +38,30 @@ public class MyLine {
         return new int[]{this.end.getX(), this.end.getY()};
     }
 
+    public void setBegin(MyPoint begin){
+        this.begin = begin;
+    }
+    public void setEnd(MyPoint end){
+        this.end = end;
+    }
+    public void setBeginX(int x){
+        this.begin.setX(x);
+    }
+    public void setBeginY(int y){
+        this.begin.setY(y);
+    }
+    public void setEndX(int x){
+        this.end.setX(x);
+    }
+    public void setEndY(int y){
+        this.end.setY(y);
+    }
+    public void setBeginXY(int x, int y){
+        this.begin.setX(x);
+        this.begin.setY(y);
+    }
+    public void setEndXY(int x, int y){
+        this.end.setX(x);
+        this.end.setY(y);
+    }
 }
