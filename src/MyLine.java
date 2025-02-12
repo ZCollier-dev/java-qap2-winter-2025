@@ -64,4 +64,9 @@ public class MyLine {
         this.end.setX(x);
         this.end.setY(y);
     }
+
+    public double getLength(){
+        //a^2 = b^2 + c^2, basically a triangle's hypotenuse, a=sqrt(b^2 + c^2)
+        return Math.sqrt(Math.pow((getBeginX() + getEndX()), 2) + Math.pow((getBeginY() + getEndY()), 2));
+    }
 }
