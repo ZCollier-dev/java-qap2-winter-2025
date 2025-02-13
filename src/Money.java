@@ -5,8 +5,9 @@ public class Money {
 
     //methods
     public Money(double amount){
-        this.dollars = (long) Math.floor(amount);
-        this.cents = (long) (amount - this.dollars) * 100;
+        amount *= 100;
+        this.dollars = (long) Math.floor(amount / 100);
+        this.cents = (long) (amount - (double) this.dollars * 100);
     }
     public Money(Money otherObject){
         this.dollars = otherObject.dollars;
@@ -57,6 +58,6 @@ public class Money {
     }
 
     public String toString(){
-        return String.format("Amount: $%d.%d", this.dollars, this.cents);
+        return String.format("Amount: $%d.%02d", this.dollars, this.cents);
     }
 }

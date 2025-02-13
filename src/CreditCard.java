@@ -6,7 +6,7 @@ public class CreditCard {
 
     //methods
     public CreditCard(Person newCardHolder, Money limit){
-        this.balance = new Money(0.0);
+        this.balance = new Money(0.00);
         this.creditLimit = limit;
         this.owner = newCardHolder;
     }
@@ -41,6 +41,6 @@ public class CreditCard {
         }
     }
     public void payment(Money amount){
-        this.balance.subtract(amount);
+        this.balance = this.balance.subtract(amount);
     }
 }

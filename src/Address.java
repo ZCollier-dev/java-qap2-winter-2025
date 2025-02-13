@@ -14,6 +14,6 @@ public class Address {
     }
 
     public String toString(){
-        return String.format("Address: %s, %s %s %s", this.street, this.city, this.province, this.postal);
+        return String.format("%s, %s %s %s", this.street, this.city, this.province, this.postal);
     }
 }

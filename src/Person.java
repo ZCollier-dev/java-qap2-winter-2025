@@ -12,6 +12,6 @@ public class Person {
     }
 
     public String toString(){
-        return String.format("Person: $s, %s %s", this.lastName, this.firstName, this.home.toString());
+        return String.format("Person: %s, %s %s", this.lastName, this.firstName, this.home.toString());
     }
 }
