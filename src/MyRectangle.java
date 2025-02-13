@@ -63,4 +63,28 @@ public class MyRectangle {
         this.endCorner.setX(x);
         this.endCorner.setY(y);
     }
+
+    public int getLength(){
+        //Gets the length (x) of the rectangle
+        return Math.abs(getEndCornerX() - getStartCornerX());
+    }
+
+    public int getHeight(){
+        //Gets the height (y) of the rectangle
+        return Math.abs(getEndCornerY() - getStartCornerY());
+    }
+
+    public int getPerimeter(){
+        //Gets the perimeter of the rectangle
+        return (getHeight() * 2) + (getLength() * 2);
+    }
+
+    public int getArea(){
+        //Gets the area of the rectangle
+        return getHeight() * getLength();
+    }
+
+    public String toString(){
+        return String.format("Start Corner: (%d,%d) End Corner: (%d,%d)", getStartCornerX(), getStartCornerY(), getEndCornerX(), getEndCornerY());
+    }
 }
