@@ -35,10 +35,15 @@ public class Money {
     }
 
     public int compareTo(Money otherObject){
-        String string1 = String.format("$d.%d", this.dollars, this.cents);
-        String string2 = String.format("$d.%d", otherObject.dollars, otherObject.cents);
-
-        return string1.compareTo(string2);
+        double double1 = (double) this.dollars + ((double) this.cents / 100);
+        double double2 = (double) otherObject.dollars + ((double) otherObject.cents / 100);
+        if (double1 < double2) {
+            return -1;
+        } else if (double1 > double2) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
     public boolean equals(Money otherObject){
         String string1 = String.format("$d.%d", this.dollars, this.cents);
