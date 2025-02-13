@@ -74,4 +74,8 @@ public class MyLine {
         //Gets the angle in radians
         return Math.atan2((getEndX() - getBeginX()), (getEndY() - getBeginY()));
     }
+
+    public String toString(){
+        return String.format("MyLine[begin=(%d,%d),end=(%d,%d)]", getBeginX(), getBeginY(), getEndX(), getEndY());
+    }
 }
