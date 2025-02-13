@@ -67,6 +67,11 @@ public class MyLine {
 
     public double getLength(){
         //a^2 = b^2 + c^2, basically a triangle's hypotenuse, a=sqrt(b^2 + c^2)
-        return Math.sqrt(Math.pow((getBeginX() + getEndX()), 2) + Math.pow((getBeginY() + getEndY()), 2));
+        return Math.sqrt(Math.pow((getEndX() - getBeginX()), 2) + Math.pow((getEndY() - getBeginY()), 2));
+    }
+
+    public double getGradient(){
+        //Gets the angle in radians
+        return Math.atan2((getEndX() - getBeginX()), (getEndY() - getBeginY()));
     }
 }
