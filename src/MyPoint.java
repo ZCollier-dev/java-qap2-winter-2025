@@ -26,4 +26,8 @@ public class MyPoint {
     public void setY(int y){
         this.y = y;
     }
+
+    public String toString(){
+        return String.format("x: %d, y: %d", this.x, this.y);
+    };
 }
